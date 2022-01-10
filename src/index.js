@@ -1,12 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './app';
-import '@fortawesome/fontawesome-free/js/all.js';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./app";
+import "@fortawesome/fontawesome-free/js/all.js";
+import Presenter from "./habit_presenter";
 
+const habitPresenter = new Presenter([
+  { id: 1, name: "Reading", count: 0 },
+  { id: 2, name: "Running", count: 0 },
+  { id: 3, name: "Coding", count: 0 },
+]);
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App presenter={habitPresenter} />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
