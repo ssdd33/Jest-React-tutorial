@@ -1,4 +1,4 @@
-const Presenter = require("./habit_presenter");
+import Presenter from "../habit_presenter";
 
 // describe("presenter", () => {
 //   let habitPresenter;
